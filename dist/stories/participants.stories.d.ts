@@ -1,0 +1,11 @@
+import type { Meta, StoryObj } from '@storybook/web-components';
+import '../src/ruby-events.js';
+declare const meta: Meta;
+export default meta;
+type Story = StoryObj;
+export declare const AllParticipants: Story;
+export declare const SpeakersOnly: Story;
+export declare const KeynoteSpeakers: Story;
+export declare const AttendeesOnly: Story;
+export declare const WithoutTabs: Story;
+export declare const Compact: Story;

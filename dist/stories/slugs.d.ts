@@ -1,0 +1,11 @@
+export declare function getBaseUrl(): string;
+export declare function getTalkSlugs(): Promise<string[]>;
+export declare function getEventSlugs(): Promise<string[]>;
+export declare function getSpeakerSlugs(): Promise<string[]>;
+export declare function getUserSlugs(): Promise<string[]>;
+export declare const FALLBACK_TALK_SLUGS: string[];
+export declare const FALLBACK_EVENT_SLUGS: string[];
+export declare const FALLBACK_SPEAKER_SLUGS: string[];
+export declare const FALLBACK_USER_SLUGS: string[];
+export declare const FALLBACK_TOPIC_SLUGS: string[];
+export declare const slugsPromise: Promise<[string[], string[], string[], string[]]>;

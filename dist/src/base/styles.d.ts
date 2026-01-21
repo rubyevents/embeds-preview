@@ -1,0 +1,12 @@
+export declare const baseStyles: import("lit").CSSResult;
+export declare const cardStyles: import("lit").CSSResult;
+export declare const thumbnailStyles: import("lit").CSSResult;
+export declare const avatarStyles: import("lit").CSSResult;
+export declare const badgeStyles: import("lit").CSSResult;
+export declare const listStyles: import("lit").CSSResult;
+export declare const tabStyles: import("lit").CSSResult;
+export declare const loadingStyles: import("lit").CSSResult;
+export declare const errorStyles: import("lit").CSSResult;
+export declare const gridStyles: import("lit").CSSResult;
+export declare const utilityStyles: import("lit").CSSResult;
+export declare const footerStyles: import("lit").CSSResult;

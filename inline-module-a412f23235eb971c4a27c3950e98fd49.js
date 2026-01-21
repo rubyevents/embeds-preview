@@ -12,17 +12,28 @@ if (SERVER_CHANNEL_URL) {
 }
 
 const importers = {
-  './dist/stories/event-card.stories.js': () => import('./event-card.stories-B0iPtzfH.js'),
-  './dist/stories/event.stories.js': () => import('./event.stories-CyAMAS2h.js'),
-  './dist/stories/events.stories.js': () => import('./events.stories-COH_0tL7.js'),
-  './dist/stories/index.stories.js': () => import('./index.stories-UhYecaMK.js'),
+  './dist/stories/event-card.stories.js': () => import('./event-card.stories-DJq7pEey.js'),
+  './dist/stories/event.stories.js': () => import('./event.stories-j2UFvtah.js'),
+  './dist/stories/events.stories.js': () => import('./events.stories-Cwxk0QDn.js'),
+  './dist/stories/index.stories.js': () => import('./index.stories-DTy5g0UI.js'),
   './dist/stories/introduction.stories.js': () => import('./introduction.stories-CUn6Y0hM.js'),
-  './dist/stories/participants.stories.js': () => import('./participants.stories-Bm-RDTyU.js'),
-  './dist/stories/passport.stories.js': () => import('./passport.stories-CtIji6gf.js'),
-  './dist/stories/profile.stories.js': () => import('./profile.stories-CSavIxOD.js'),
-  './dist/stories/speaker.stories.js': () => import('./speaker.stories-C5FvBqR-.js'),
-  './dist/stories/stickers.stories.js': () => import('./stickers.stories-D-rRJGux.js'),
-  './dist/stories/topic.stories.js': () => import('./topic.stories-CQ2SaTl3.js')
+  './dist/stories/participants.stories.js': () => import('./participants.stories-Cfbq7YxV.js'),
+  './dist/stories/passport.stories.js': () => import('./passport.stories-BCjj7e_j.js'),
+  './dist/stories/profile.stories.js': () => import('./profile.stories-2z1Lrqhr.js'),
+  './dist/stories/speaker.stories.js': () => import('./speaker.stories-4EJWtHNM.js'),
+  './dist/stories/stickers.stories.js': () => import('./stickers.stories-Dcrf2fCa.js'),
+  './dist/stories/topic.stories.js': () => import('./topic.stories-DvnaOwjh.js'),
+  './storybook-static/dist/stories/event-card.stories.js': () => import('./event-card.stories-qSr8_3qN.js'),
+  './storybook-static/dist/stories/event.stories.js': () => import('./event.stories-B10HWg9-.js'),
+  './storybook-static/dist/stories/events.stories.js': () => import('./events.stories-DzDpmdtU.js'),
+  './storybook-static/dist/stories/index.stories.js': () => import('./index.stories-DsYMwiWR.js'),
+  './storybook-static/dist/stories/introduction.stories.js': () => import('./introduction.stories-ClE4mDzm.js'),
+  './storybook-static/dist/stories/participants.stories.js': () => import('./participants.stories-cWoVPxtU.js'),
+  './storybook-static/dist/stories/passport.stories.js': () => import('./passport.stories-BFky747n.js'),
+  './storybook-static/dist/stories/profile.stories.js': () => import('./profile.stories-D4sWyHaT.js'),
+  './storybook-static/dist/stories/speaker.stories.js': () => import('./speaker.stories-D8VA6fVb.js'),
+  './storybook-static/dist/stories/stickers.stories.js': () => import('./stickers.stories-OIIPit1z.js'),
+  './storybook-static/dist/stories/topic.stories.js': () => import('./topic.stories-4GjbOr1p.js')
 };
 
 function importFn(path) {
