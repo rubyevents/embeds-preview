@@ -16,6 +16,7 @@ const importers = {
   './dist/stories/event.stories.js': () => import('./event.stories-CyAMAS2h.js'),
   './dist/stories/events.stories.js': () => import('./events.stories-COH_0tL7.js'),
   './dist/stories/index.stories.js': () => import('./index.stories-UhYecaMK.js'),
+  './dist/stories/introduction.stories.js': () => import('./introduction.stories-CUn6Y0hM.js'),
   './dist/stories/participants.stories.js': () => import('./participants.stories-Bm-RDTyU.js'),
   './dist/stories/passport.stories.js': () => import('./passport.stories-CtIji6gf.js'),
   './dist/stories/profile.stories.js': () => import('./profile.stories-CSavIxOD.js'),
@@ -31,14 +32,14 @@ function importFn(path) {
 const getProjectAnnotations = async () => {
   const configs = await Promise.all([
     import('./entry-preview-WS6LzCR5.js'),
-    import('./entry-preview-docs-nMKoTy6n.js'),
-    import('./preview-CiBoy_in.js'),
+    import('./entry-preview-docs-vuYRWjVk.js'),
+    import('./preview-UQw5zITQ.js'),
     import('./preview-BbsZ1HGL.js'),
     import('./preview-BlJG9B2P.js'),
     import('./preview-Dhf5Fisp.js'),
     import('./preview-BYsVd6Zb.js'),
     import('./preview-CDagOaLU.js'),
-    import('./preview-BXOJxA5G.js')
+    import('./preview-BCJYMtXk.js')
   ]);
   return __STORYBOOK_MODULE_PREVIEW_API__.composeConfigs(configs);
 };

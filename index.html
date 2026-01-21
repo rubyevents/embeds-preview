@@ -41,7 +41,13 @@
     <link href="./sb-addons/essentials-measure-5/manager-bundle.js" rel="modulepreload" />
     
     <link href="./sb-addons/essentials-outline-6/manager-bundle.js" rel="modulepreload" />
-       
+      <script>
+  // Redirect root to demo page, but allow accessing Storybook via ?path=
+  if (window.location.search === '' && window.location.hash === '') {
+    window.location.href = './demo.html';
+  }
+</script>
+ 
 
     <style>
       #storybook-root[hidden] {

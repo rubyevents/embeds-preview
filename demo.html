@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <title>RubyEvents Embeddable Components Demo</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Inter, system-ui, -apple-system, sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 2rem;
+      line-height: 1.5;
+    }
+
+    h1 {
+      color: #261b23;
+      margin-bottom: 0.5rem;
+    }
+
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+
+    .section {
+      margin-bottom: 3rem;
+    }
+
+    .section h2 {
+      color: #261b23;
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid #dc143c;
+    }
+
+    .section p {
+      color: #6b7280;
+      font-size: 0.875rem;
+      margin-bottom: 1rem;
+    }
+
+    pre {
+      background: #261b23;
+      color: #f8f9fa;
+      padding: 1rem;
+      border-radius: 8px;
+      overflow-x: auto;
+      margin: 0 0 1rem 0;
+    }
+
+    pre code {
+      font-family: ui-monospace, monospace;
+      font-size: 0.875rem;
+    }
+
+    .demo-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+      gap: 2rem;
+    }
+
+    .demo-item {
+      background: white;
+      padding: 1.5rem;
+      border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    }
+
+    .note {
+      background: #fef3c7;
+      border-left: 4px solid #f59e0b;
+      padding: 1rem;
+      margin: 1rem 0;
+      font-size: 0.875rem;
+      border-radius: 0 8px 8px 0;
+    }
+  </style>
+</head>
+<body>
+  <h1>@rubyevents/embeds</h1>
+  <p class="subtitle">Embeddable web components for displaying Ruby conference content</p>
+
+  <div class="note">
+    <strong>Note:</strong> These components fetch data from the RubyEvents API.
+    In development, you may need to run the Rails server with CORS enabled,
+    or update the <code>base-url</code> attribute to point to a running instance.
+  </div>
+
+  <div class="section">
+    <h2>Talk Component</h2>
+    <p>Display a single talk with video thumbnail, speakers, and event info.</p>
+    <pre><code>&lt;rubyevents-talk slug="keynote-rubyllm" show-footer&gt;&lt;/rubyevents-talk&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-talk slug="keynote-rubyllm" base-url="http://localhost:3000" show-footer></rubyevents-talk>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Speaker Component</h2>
+    <p>Display a speaker profile with their talks and events.</p>
+    <pre><code>&lt;rubyevents-speaker slug="tenderlove" tab="talks"&gt;&lt;/rubyevents-speaker&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-speaker slug="tenderlove" tab="talks" base-url="http://localhost:3000"></rubyevents-speaker>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Topic Component</h2>
+    <p>Display talks for a specific topic.</p>
+    <pre><code>&lt;rubyevents-topic slug="truffleruby" limit="10"&gt;&lt;/rubyevents-topic&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-topic slug="truffleruby" limit="10" base-url="http://localhost:3000"></rubyevents-topic>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Events Component</h2>
+    <p>Display a list of upcoming or past events.</p>
+    <pre><code>&lt;rubyevents-events filter="upcoming" show-filter&gt;&lt;/rubyevents-events&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-events filter="upcoming" show-filter base-url="http://localhost:3000"></rubyevents-events>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Event Component</h2>
+    <p>Display a single event with details, stats, and participant avatars.</p>
+    <pre><code>&lt;rubyevents-event slug="rubyconf-2024" show-participants&gt;&lt;/rubyevents-event&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-event slug="rubyconf-2024" show-participants base-url="http://localhost:3000"></rubyevents-event>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Profile Component</h2>
+    <p>Display a user profile with attending events and watch lists.</p>
+    <pre><code>&lt;rubyevents-profile slug="chaelcodes"&gt;&lt;/rubyevents-profile&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-profile slug="chaelcodes" base-url="http://localhost:3000"></rubyevents-profile>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Participants Component</h2>
+    <p>Display participants/attendees of an event.</p>
+    <pre><code>&lt;rubyevents-participants slug="sfruby-2025" show-tabs&gt;&lt;/rubyevents-participants&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-participants slug="sfruby-2025" show-tabs base-url="http://localhost:3000"></rubyevents-participants>
+    </div>
+
+    <p>Compact mode with small avatars, no names, no groups.</p>
+    <pre><code>&lt;rubyevents-participants slug="sfruby-2025" compact&gt;&lt;/rubyevents-participants&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-participants slug="sfruby-2025" compact base-url="http://localhost:3000"></rubyevents-participants>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Passport Component</h2>
+    <p>Display a user's stamps in a passport/stamp book style layout.</p>
+    <pre><code>&lt;rubyevents-passport slug="chaelcodes"&gt;&lt;/rubyevents-passport&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-passport slug="chaelcodes" base-url="http://localhost:3000"></rubyevents-passport>
+    </div>
+  </div>
+
+  <div class="section">
+    <h2>Stickers Component</h2>
+    <p>Display a user's stickers on a MacBook-style laptop lid.</p>
+    <pre><code>&lt;rubyevents-stickers slug="chaelcodes"&gt;&lt;/rubyevents-stickers&gt;</code></pre>
+    <div class="demo-item">
+      <rubyevents-stickers slug="chaelcodes" base-url="http://localhost:3000"></rubyevents-stickers>
+    </div>
+  </div>
+
+  <script type="module">
+    import '../dist/src/ruby-events.js';
+
+    // Automatically use rubyevents.org when not on localhost
+    const baseUrl = (window.location.hostname === 'localhost' || window.location.hostname === '127.0.0.1')
+      ? 'http://localhost:3000'
+      : 'https://www.rubyevents.org';
+
+    // Set base-url on all components
+    document.querySelectorAll('[base-url]').forEach(el => {
+      el.setAttribute('base-url', baseUrl);
+    });
+  </script>
+</body>
+</html>
